@@ -1,90 +1,223 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ONLYBARKA — Official</title>
-  <meta name="description" content="Official contact page for ONLYBARKA, independent artist and singer-songwriter.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>ONLYBARKA — Sitio Oficial</title>
+  <meta name="description" content="Sitio oficial de ONLYBARKA, artista musical independiente. Música, lanzamientos y redes oficiales.">
+  <meta name="theme-color" content="#080b13">
+
+  <meta property="og:title" content="ONLYBARKA — Official Artist Website">
+  <meta property="og:description" content="Música independiente. Conocé el proyecto y seguí los canales oficiales de ONLYBARKA.">
+  <meta property="og:type" content="website">
+
   <style>
+    :root {
+      color-scheme: dark;
+      --bg: #080b13;
+      --panel: #101725;
+      --line: #263248;
+      --text: #f4f6fb;
+      --muted: #a5b0c3;
+      --accent: #8caeff;
+    }
+
     * { box-sizing: border-box; }
+
     body {
       margin: 0;
       min-height: 100vh;
+      padding: 32px 16px;
       display: grid;
       place-items: center;
       background:
-        radial-gradient(circle at 50% 20%, #202020 0, #0d0d0d 38%, #050505 100%);
-      color: #fff;
+        radial-gradient(ellipse at 50% 0%, #1b2942 0%, transparent 55%),
+        var(--bg);
+      color: var(--text);
       font-family: Arial, Helvetica, sans-serif;
     }
+
     main {
-      width: min(92%, 620px);
-      text-align: center;
-      padding: 56px 30px;
-      border: 1px solid #292929;
+      width: min(100%, 620px);
+      padding: clamp(24px, 6vw, 48px);
+      background: rgba(16, 23, 37, .94);
+      border: 1px solid var(--line);
       border-radius: 24px;
-      background: rgba(12, 12, 12, 0.82);
-      box-shadow: 0 20px 70px rgba(0,0,0,.45);
+      box-shadow: 0 24px 90px #0006;
     }
+
+    header { text-align: center; }
+
     .mark {
-      width: 72px;
-      height: 72px;
-      margin: 0 auto 24px;
+      width: 76px;
+      height: 76px;
       display: grid;
       place-items: center;
-      border-radius: 50%;
-      background: #fff;
-      color: #050505;
-      font-size: 30px;
+      margin: 0 auto 24px;
+      border: 1px solid #536783;
+      border-radius: 22px;
+      background: #19263b;
+      color: white;
+      font-size: 27px;
       font-weight: 900;
+      letter-spacing: -2px;
     }
-    h1 {
-      margin: 0;
-      font-size: clamp(42px, 10vw, 76px);
-      letter-spacing: .08em;
-      line-height: 1;
-    }
-    .role {
-      margin: 18px 0 42px;
-      color: #aaa;
-      font-size: 15px;
-      letter-spacing: .08em;
+
+    .eyebrow {
+      color: var(--accent);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .22em;
       text-transform: uppercase;
     }
-    .contact {
-      border-top: 1px solid #292929;
-      padding-top: 28px;
+
+    h1 {
+      margin: 15px 0 12px;
+      font-size: clamp(32px, 8vw, 54px);
+      letter-spacing: .07em;
+      overflow-wrap: anywhere;
     }
-    .name {
-      font-size: 20px;
-      font-weight: 700;
-      margin-bottom: 8px;
+
+    .intro {
+      margin: 0 auto;
+      max-width: 390px;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.7;
     }
-    .email {
-      color: #fff;
-      font-size: 16px;
+
+    section { margin-top: 36px; }
+
+    h2 {
+      margin: 0 0 14px;
+      color: var(--muted);
+      font-size: 11px;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+    }
+
+    .links {
+      display: grid;
+      gap: 10px;
+    }
+
+    .link {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 16px 18px;
+      border: 1px solid var(--line);
+      border-radius: 13px;
+      background: #ffffff04;
+      color: var(--text);
       text-decoration: none;
+      transition: border-color .2s, background .2s;
     }
-    .email:hover { text-decoration: underline; }
-    footer {
-      margin-top: 38px;
-      color: #666;
+
+    .link:hover, .link:focus-visible {
+      border-color: var(--accent);
+      background: #8caeff0d;
+      outline: none;
+    }
+
+    .link small {
+      display: block;
+      margin-top: 4px;
+      color: var(--muted);
       font-size: 12px;
+    }
+
+    .arrow {
+      color: var(--accent);
+      font-size: 20px;
+    }
+
+    .contact {
+      padding-top: 24px;
+      border-top: 1px solid var(--line);
+    }
+
+    .email {
+      color: var(--text);
+      overflow-wrap: anywhere;
+      text-decoration-color: #536783;
+      text-underline-offset: 4px;
+    }
+
+    footer {
+      margin-top: 34px;
+      color: #748198;
+      font-size: 11px;
+      line-height: 1.7;
+      text-align: center;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        transition: none !important;
+      }
     }
   </style>
 </head>
+
 <body>
   <main>
-    <div class="mark">O</div>
-    <h1>ONLYBARKA</h1>
-    <p class="role">Independent Artist · Singer-Songwriter</p>
+    <header>
+      <div class="mark" aria-label="ONLYBARKA">OB</div>
+      <div class="eyebrow">Official artist website</div>
+      <h1>ONLYBARKA</h1>
+      <p class="intro">
+        Artista independiente y cantante.
+        Música, identidad y visión propia.
+        Bienvenido a mis canales oficiales.
+      </p>
+    </header>
 
-    <section class="contact">
-      <div class="name">Camilo Corbalan</div>
-      <a class="email" href="mailto:barkitax@gmail.com">barkitax@gmail.com</a>
+    <section aria-labelledby="social-title">
+      <h2 id="social-title">Canales oficiales</h2>
+
+      <div class="links">
+        <a class="link"
+           href="https://www.instagram.com/itsbarkita/"
+           target="_blank" rel="noopener noreferrer">
+          <span>Instagram<small>@itsbarkita</small></span>
+          <span class="arrow" aria-hidden="true">↗</span>
+        </a>
+
+        <a class="link"
+           href="https://www.tiktok.com/@barkitax"
+           target="_blank" rel="noopener noreferrer">
+          <span>TikTok<small>@barkitax</small></span>
+          <span class="arrow" aria-hidden="true">↗</span>
+        </a>
+
+        <a class="link"
+           href="https://www.youtube.com/@ItsBarka"
+           target="_blank" rel="noopener noreferrer">
+          <span>YouTube<small>@ItsBarka</small></span>
+          <span class="arrow" aria-hidden="true">↗</span>
+        </a>
+      </div>
     </section>
 
-    <footer>Official artist contact</footer>
+    <section class="contact" aria-labelledby="contact-title">
+      <h2 id="contact-title">Contacto profesional</h2>
+
+      <!-- Reemplazá este correo por el que usás en DistroKid
+           y en tu solicitud de Spotify for Artists. -->
+      <a class="email"
+         href="mailto:REEMPLAZAR_CON_TU_CORREO_PROFESIONAL">
+        REEMPLAZAR_CON_TU_CORREO_PROFESIONAL
+      </a>
+    </section>
+
+    <footer>
+      ONLYBARKA · Sitio oficial del artista<br>
+      Argentina · Uruguay
+    </footer>
   </main>
 </body>
 </html>
